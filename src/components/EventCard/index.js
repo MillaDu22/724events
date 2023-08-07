@@ -38,7 +38,9 @@ EventCard.propTypes = {
 };
 
 EventCard.defaultProps = {
+  imageSrc: "",
   imageAlt: "image",
+  title:"",
   small: false,
 }
 

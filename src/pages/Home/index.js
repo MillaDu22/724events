@@ -26,10 +26,9 @@ const Page = () => {
       const byDateDesc = await data?.events.sort((evtA, evtB) =>
       new Date(evtA.date) < new Date(evtB.date) ? 1 : -1)
       setLast(byDateDesc[0])
-      //last est 0 à l'index de byDateDesc//
+      //last passe sur 0 à l'index de byDateDesc//
       console.log(byDateDesc)
     }
-    
     getLast()
   }, [data]);
   return <>
