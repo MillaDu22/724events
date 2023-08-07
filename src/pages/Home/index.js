@@ -16,7 +16,7 @@ import {useEffect, useState} from "react";
 const Page = () => {
   // Récupération méthode sort du slider pour last eventCard//
   const {data} = useData()
-  const [Last, setLast] = useState() 
+  const [Last, setLast] = useState() ;
   useEffect(() => {
     // Déclenchement fonction async pour changement state//
     //fonction pour obtenir last //
@@ -24,11 +24,12 @@ const Page = () => {
       //Tableau byDateDesc trié par date du plus récent au plus ancien de A à B//
       const byDateDesc = await data?.events.sort((evtA, evtB) =>
       new Date(evtA.date) < new Date(evtB.date) ? 1 : -1)
-      setLast(byDateDesc[0])
-      //last passe sur 0 à l'index de byDateDesc//
+      setLast(byDateDesc)
+      //last est passé sur 0 à l'index de byDateDesc//
     }
     getLast()
   }, [data]);
+
   return <>
     <header>
       <Menu />
@@ -132,12 +133,13 @@ const Page = () => {
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
         <EventCard
-          imageSrc={Last?.cover}
-          title={Last?.title}
-          date={new Date(Last?.date)}
+          // lastEvent 0 à l'index tableau trié par date //
+          imageSrc={Last?.[0].cover}
+          title={Last?.[0].title}
+          date={new Date(Last?.[0].date)}
           small
           //label=type//
-          label= {Last?.type}
+          label= {Last?.[0].type}
         />
       </div>
       <div className="col contact">
