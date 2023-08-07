@@ -10,7 +10,7 @@ import Logo from "../../components/Logo";
 import Icon from "../../components/Icon";
 import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
-import { useData } from "../../contexts/DataContext";
+import { useData } from "../../contexts/DataContext"
 
 const Page = () => {
   const {last} = useData()
