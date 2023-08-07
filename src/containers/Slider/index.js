@@ -7,11 +7,17 @@ import "./style.scss";
 const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);
-  //inversement paramètres méthde sort pour le défilement slides//
-  const byDateDesc = data?.focus.sort((evtB, evtA) =>
-  //-1 pour l'évenement le plus récent A, 1 pour l'évenement le plus ancien B//
-    new Date(evtA.date) < new Date(evtB.date) ? 1 : -1
-  );
+  const [byDateDesc, setByDateDesc]= useState([])
+  useEffect(() => {
+    if (data) {
+      //Inversement de l'ordre de tri sur la méthode sort//
+      const tmpByDateDesc = data.focus.sort((evtB, evtA) =>
+      //faffichage du plus ancien au plus récent dans mon nouveau tableau//
+      new Date(evtA.date) < new Date(evtB.date) ? 1 : -1)
+    ;
+    setByDateDesc(tmpByDateDesc)
+  }
+  },[data])
   const nextCard = () => {
     setTimeout(
       //retrait 1 pour ne plus dépasser du tableau//
