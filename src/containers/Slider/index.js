@@ -33,6 +33,7 @@ const Slider = () => {
       {byDateDesc?.map((event, idx) => (
           <div
             key={event.title}>
+              {/*Ajout key prop pour annulation warning console*/}
               <div key={event.title}
                   className={`SlideCard SlideCard--${
                   index === idx ? "display" : "hide"
