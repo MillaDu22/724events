@@ -50,6 +50,7 @@ const Slider = () => {
                   name="radio-button"
                   /*deboggagage bouton radio, index slides strictement = à index boutons radio*/
                   checked={index === radioIdx}
+                  onChange = {()=> null}
                 />
               ))}
             </div>

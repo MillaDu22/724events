@@ -16,7 +16,6 @@ import {useEffect, useState} from "react";
 const Page = () => {
   // Récupération méthode sort du slider pour last eventCard//
   const {data} = useData()
-  console.log(data)
   const [Last, setLast] = useState() 
   useEffect(() => {
     // Déclenchement fonction async pour changement state//
@@ -27,7 +26,6 @@ const Page = () => {
       new Date(evtA.date) < new Date(evtB.date) ? 1 : -1)
       setLast(byDateDesc[0])
       //last passe sur 0 à l'index de byDateDesc//
-      console.log(byDateDesc)
     }
     getLast()
   }, [data]);
