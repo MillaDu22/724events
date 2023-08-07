@@ -54,7 +54,7 @@ const EventList = () => {
             selection={Array.from(typeList)}
             //implement//
             onChange={(value) => {
-              if (value) changeType(value) //si type = type change type// 
+              if (value) changeType(value) //si type = type, change type// 
               else changeType(null) //Sinon change rien//
             }}
           />

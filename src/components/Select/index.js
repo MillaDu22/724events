@@ -16,10 +16,10 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    //rajout parametre a l'onChange
+    // Passage au state suivant et rajout parametre nouvelle catégorie a l'onChange //
     onChange(newValue);
     setValue(newValue);
-    // Fermeture collapse, state false //
+    // State suivant pour le collapse: Fermé collapse, state false //
     setCollapsed(!collapsed);
   };
   return (
