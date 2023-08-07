@@ -7,8 +7,10 @@ import "./style.scss";
 const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);
-  const byDateDesc = data?.focus.sort((evtA, evtB) =>
-    new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
+  //inversement défilement slides//
+  const byDateDesc = data?.focus.sort((evtB, evtA) =>
+  //-1 pour l'évenement le plus récent A, 1 pour l'évenement le plus ancien B//
+    new Date(evtA.date) < new Date(evtB.date) ? 1 : -1
   );
   const nextCard = () => {
     setTimeout(
@@ -46,7 +48,7 @@ const Slider = () => {
                   key={`${event.id}`}
                   type="radio"
                   name="radio-button"
-                  /*deboggagage bouton radio, index strictement = à index bouton*/
+                  /*deboggagage bouton radio, index slides strictement = à index boutons radio*/
                   checked={index === radioIdx}
                 />
               ))}
