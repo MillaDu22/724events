@@ -14,4 +14,5 @@ export const MONTHS = {
 };
 
 export const getMonth = (date) => MONTHS[date.getMonth()+1];
-//getMonth +1 pour rétablir l'index months à 0 pour Janvier//
+// getMonth = index +1 pour rétablir l'index months à 0 pour Janvier//
+

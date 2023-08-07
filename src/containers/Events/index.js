@@ -13,11 +13,21 @@ const EventList = () => {
   const { data, error } = useData();
   const [type, setType] = useState();
   const [currentPage, setCurrentPage] = useState(1);
+  console.log(data);
   const filteredEvents = (
     (!type
       ? data?.events
       : data?.events) || []
-  ).filter((event, index) => {
+     // Methode filter pour Ajout filtrage par type , type evenement strictement = pour retourner true //
+    ).filter((event) => {
+      if (
+          (!type || event.type === type)
+      ) {
+        return true;
+      }
+      return false
+      //Filtrage par page ok//
+      }).filter((event, index)=> {
     if (
       (currentPage - 1) * PER_PAGE <= index &&
       PER_PAGE * currentPage > index
@@ -42,7 +52,11 @@ const EventList = () => {
           <h3 className="SelectTitle">Catégories</h3>
           <Select
             selection={Array.from(typeList)}
-            onChange={(value) => (value ? changeType(value) : changeType(null))}
+            //implement//
+            onChange={(value) => {
+              if (value) changeType(value) //si type = type change type// 
+              else changeType(null) //Sinon change rien//
+            }}
           />
           <div id="events" className="ListContainer">
             {filteredEvents.map((event) => (
