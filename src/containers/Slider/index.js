@@ -7,7 +7,7 @@ import "./style.scss";
 const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);
-  //inversement défilement slides//
+  //inversement paramètres méthde sort pour le défilement slides//
   const byDateDesc = data?.focus.sort((evtB, evtA) =>
   //-1 pour l'évenement le plus récent A, 1 pour l'évenement le plus ancien B//
     new Date(evtA.date) < new Date(evtB.date) ? 1 : -1
