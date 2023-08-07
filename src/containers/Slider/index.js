@@ -12,7 +12,8 @@ const Slider = () => {
   );
   const nextCard = () => {
     setTimeout(
-      () => setIndex(index < byDateDesc.length ? index + 1 : 0),
+      //retrait 1 pour ne plus dépasser du tableau//
+      () => setIndex(index < byDateDesc.length -1 ? index + 1 : 0),
       5000
     );
   };
