@@ -31,7 +31,7 @@ const Page = () => {
   }, [data]);
 
   return <>
-    <header>
+    <header className ="haut-page">
       <Menu />
     </header>
     <main>
@@ -129,7 +129,7 @@ const Page = () => {
         </Modal>
       </div>
     </main>
-    <footer data-testid="footer-testid" className="row">
+    <footer data-testid="footer-testid" className="row-foot">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
         <EventCard
@@ -146,7 +146,7 @@ const Page = () => {
       <div className="col contact">
         <h3>Contactez-nous</h3>
         <address>45 avenue de la République, 75000 Paris</address>
-        <div>01 23 45 67 89</div>
+        <div className = "number">01 23 45 67 89</div>
         <a href="mailto:contact@77events.com">contact@77events.com</a>
         <div className="reseaux">
           <a href="#twitch">

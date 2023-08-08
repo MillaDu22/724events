@@ -20,20 +20,22 @@ nav {
     list-style: none;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width:59%;
     justify-content: flex-end;
-    margin: 0;
+    margin-left: 15%;
+    padding:0;
     li {
       list-style: none;
-      margin: 40px;
+      margin: 3%;
       padding: 0;
-      width:14.5%;
+      width:24%;
+      text-align: center;
       a {
         text-decoration: none;
         color: $black;
       }
     }
-    padding-right: 50px;
+
   }
 }
 
