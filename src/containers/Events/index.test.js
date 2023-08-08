@@ -49,7 +49,8 @@ describe("When Events is created", () => {
   });
 
   describe("and we select a category", () => {
-    it.only("an filtered list is displayed", async () => {
+    //retrait méthode only//
+    it("an filtered list is displayed", async () => {
       api.loadData = jest.fn().mockReturnValue(data);
       render(
         <DataProvider>

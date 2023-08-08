@@ -30,7 +30,6 @@ describe("When Modal data is created", () => {
       );
     });
   });
-
   describe("and a click is triggered to the close button modal", () => {
     it("the content of the modal is hide", async () => {
       render(
@@ -38,7 +37,6 @@ describe("When Modal data is created", () => {
           {() => null}
         </Modal>
       );
-
       expect(screen.getByText("modal content")).toBeInTheDocument();
       fireEvent(
         screen.getByTestId("close-modal"),
@@ -47,7 +45,6 @@ describe("When Modal data is created", () => {
           bubbles: true,
         })
       );
-
       expect(screen.queryByText("modal content")).not.toBeInTheDocument();
     });
   });
