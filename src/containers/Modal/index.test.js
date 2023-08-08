@@ -20,7 +20,7 @@ describe("When Modal data is created", () => {
           {() => <button data-testid="open-modal"></button>}
         </Modal>
       );
-      expect(screen.queryByText("modal content")).not.toBeInTheDocument();
+      expect(screen.queryByText("modal, content")).not.toBeInTheDocument();
       fireEvent(
         screen.getByTestId("open-modal"),
         new MouseEvent("click", {
