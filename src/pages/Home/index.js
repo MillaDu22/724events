@@ -129,10 +129,11 @@ const Page = () => {
         </Modal>
       </div>
     </main>
-    <footer className="row">
+    <footer data-testid="footer-testid" className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
         <EventCard
+          data-testid="lastEvent-testid"
           // lastEvent 0 à l'index tableau trié par date //
           imageSrc={Last?.[0].cover}
           title={Last?.[0].title}
