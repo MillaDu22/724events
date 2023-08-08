@@ -23,7 +23,7 @@ const EventCard = ({
       </div>
       <div className="EventCard__descriptionContainer">
         <div className="EventCard__title">{title}</div>
-        <div className="EventCard__month">{getMonth(date)}</div>
+        <div className="EventCard__month" data-testid="month-element">{getMonth(date)}</div>
       </div>
     </div>
   );
@@ -44,7 +44,7 @@ EventCard.defaultProps = {
   imageAlt: "image",
   title:"",
   small: false,
-  label:""
+  label:"",
 }
 
 export default EventCard;
