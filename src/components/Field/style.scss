@@ -6,6 +6,7 @@
   color: $black;
   align-items: flex-start;
   margin: 8px;
+  width:96%;
   span {
     font-size: 12pt;
     margin-bottom: 4px;
@@ -13,7 +14,7 @@
 }
 input {
   height: 60px;
-  min-width: 424px;
+  width: 95%;
   font-size: 16px;
   text-transform: capitalize;
   padding-left: 16px;
@@ -29,7 +30,7 @@ input {
 }
 textarea {
   height: 336px;
-  min-width: 424px;
+  width: 88%;
   font-size: 16px;
   padding: 16px;
   border-radius: 4px;
@@ -42,3 +43,13 @@ textarea {
 
   font-family: "Manrope", sans-serif;
 }
+.inputField {
+width:100%;
+}
+ul {
+  width:90%;
+}
+.SelectTitle--Show {
+  width:100%;
+}
+

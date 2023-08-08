@@ -1,12 +1,17 @@
 @import "src/colors.scss";
 
 header {
+  display: flex;
+  flex-direction: row;
   height: 112px;
+  width:100%;
 }
+
 nav {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
   display: flex;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -14,6 +19,7 @@ nav {
   ul {
     list-style: none;
     display: flex;
+    flex-direction: row;
     width: 80%;
     justify-content: flex-end;
     margin: 0;
@@ -21,6 +27,7 @@ nav {
       list-style: none;
       margin: 40px;
       padding: 0;
+      width:14.5%;
       a {
         text-decoration: none;
         color: $black;
@@ -29,3 +36,4 @@ nav {
     padding-right: 50px;
   }
 }
+

@@ -148,7 +148,7 @@ const Page = () => {
         <address>45 avenue de la République, 75000 Paris</address>
         <div>01 23 45 67 89</div>
         <a href="mailto:contact@77events.com">contact@77events.com</a>
-        <div>
+        <div className="reseaux">
           <a href="#twitch">
             <Icon name="twitch" />
           </a>
