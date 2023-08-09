@@ -10,18 +10,18 @@ const Slider = () => {
   const [byDateDesc, setByDateDesc]= useState([])
   useEffect(() => {
     if (data) {
-      //Inversement de l'ordre de tri sur la méthode sort//
-      const tmpByDateDesc = data.focus.sort((evtB, evtA) =>
-      //faffichage du plus ancien au plus récent dans mon nouveau tableau//
-      new Date(evtA.date) < new Date(evtB.date) ? 1 : -1)
+      //Tri par date de A à B (sens) de mon tableau events avec la méthode sort//
+      const tmpByDateDesc = data.focus.sort((evtA, evtB) =>
+      /*A passe plus petit que B, affichage du plus ancien (-1, le dernier),
+      au plus récent (+1 le premier) dans mon nouveau tableau*/
+      new Date(evtA.date) < new Date(evtB.date) ? -1 : +1)
     ;
     setByDateDesc(tmpByDateDesc)
   }
   },[data])
   const nextCard = () => {
-    setTimeout(
-      //retrait 1 pour ne plus dépasser du tableau//
-      () => setIndex(index < byDateDesc.length -1 ? index + 1 : 0),
+    //retrait 1  pour ne plus dépasser du tableau//
+    setTimeout(() => setIndex(index < byDateDesc.length -1 ? index + 1 : 0),
       5000
     );
   };
