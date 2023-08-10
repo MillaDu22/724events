@@ -49,7 +49,7 @@ describe("When Events is created", () => {
   });
 
   describe("and we select a category", () => {
-    //retrait méthode only//
+    //retrait méthode only pour executer un seul test avec le framework de test Mocha et no jest//
     it("an filtered list is displayed", async () => {
       api.loadData = jest.fn().mockReturnValue(data);
       render(

@@ -29,7 +29,6 @@ const Page = () => {
     }
     getLast()
   }, [data]);
-
   return <>
     <header className ="haut-page">
       <Menu />
@@ -177,3 +176,4 @@ const Page = () => {
 }
 
 export default Page;
+
